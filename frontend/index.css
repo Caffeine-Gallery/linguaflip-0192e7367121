@@ -1,0 +1,21 @@
+.translation-result {
+    background-color: #f8f9fa;
+    min-height: 100px;
+}
+
+#translatedText {
+    margin-bottom: 10px;
+}
+
+.history-item {
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.history-item:hover {
+    background-color: #f8f9fa;
+}
+
+.spinner-border {
+    margin-right: 5px;
+}

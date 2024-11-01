@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Translation App</h1>
+        
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="sourceText" class="form-label">Enter English Text:</label>
+                            <textarea class="form-control" id="sourceText" rows="3"></textarea>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Select Target Language:</label>
+                            <select class="form-select" id="targetLang">
+                                <option value="de">German</option>
+                                <option value="fr">French</option>
+                                <option value="es">Spanish</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <button class="btn btn-primary" id="translateBtn">
+                                <span class="spinner-border spinner-border-sm d-none" id="translateSpinner"></span>
+                                Translate
+                            </button>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Translation:</label>
+                            <div class="translation-result p-3 border rounded" id="translationResult">
+                                <p id="translatedText"></p>
+                                <button class="btn btn-secondary btn-sm" id="speakBtn" disabled>
+                                    <i class="bi bi-volume-up"></i> Speak
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        Recent Translations
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group" id="historyList"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
